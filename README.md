@@ -1,6 +1,6 @@
-# Nur al-Quran — Standalone Website
+# Nur al-Quran
 
-A fast, responsive Quran reading & recitation website built with plain HTML, CSS, and JavaScript. No build step required.
+A fast, responsive Quran reading & recitation website built with plain HTML, CSS, and JavaScript.
 
 ## Features
 - Beautiful Islamic UI with dark/light theme
