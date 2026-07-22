@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nur al-Quran — Read & Listen to the Holy Quran</title>
+  <meta name="description" content="Read the Holy Quran online with Arabic text, Urdu translation, search, and audio recitations from renowned reciters." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#/" class="brand">
+        <span class="brand-mark">﷽</span>
+        <span class="brand-name">Nur al-Quran</span>
+      </a>
+      <nav class="nav">
+        <a href="#/">Home</a>
+        <a href="#/surahs">Surahs</a>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p class="arabic gold big">﷽</p>
+    <p>Data by alquran.cloud · Audio by islamic.network</p>
+    <p class="dim">&copy; <span id="year"></span> Nur al-Quran. Built with reverence.</p>
+  </footer>
+
+  <!-- Templates -->
+  <template id="tpl-home">
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="arabic gold xl">﷽</p>
+        <h1 class="display">The Noble Quran</h1>
+        <p class="lede">Read, listen and reflect. All 114 Surahs with Arabic text, Urdu translation and recitations from renowned Qaris.</p>
+        <form id="searchForm" class="search-bar">
+          <span class="search-ic">🔍</span>
+          <input id="searchInput" type="text" placeholder="Search the Quran (e.g. mercy, patience)" />
+          <button type="submit" class="btn btn-gold">Search</button>
+        </form>
+        <a href="#/surahs" class="link-muted">Browse all Surahs →</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <section id="searchResults" class="section hidden"></section>
+      <section id="continueSection" class="section hidden"></section>
+
+      <section class="section">
+        <h2 class="section-title">✦ Ayah of the moment</h2>
+        <div id="dailyAyah" class="ayah-card">Loading…</div>
+      </section>
+
+      <section class="section">
+        <div class="row-between">
+          <h2 class="section-title">All 114 Surahs</h2>
+          <input id="filterInput" class="input" placeholder="Filter…" />
+        </div>
+        <div id="surahGrid" class="surah-grid"></div>
+      </section>
+    </div>
+  </template>
+
+  <template id="tpl-surahs">
+    <div class="container">
+      <section class="section">
+        <h1 class="display sm">All Surahs</h1>
+        <input id="filterInput" class="input full" placeholder="Filter by name or number…" />
+        <div id="surahGrid" class="surah-grid mt"></div>
+      </section>
+    </div>
+  </template>
+
+  <template id="tpl-surah">
+    <div class="container">
+      <a href="#/surahs" class="link-muted">← Back to Surahs</a>
+      <header id="surahHeader" class="surah-header"></header>
+      <div id="audioBar" class="audio-bar"></div>
+      <div id="ayahList" class="ayah-list"></div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
